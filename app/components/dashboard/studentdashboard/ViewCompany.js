@@ -10,7 +10,6 @@ export const ViewCompany = (props) => {
       <tr key={key}>
         <th>{accounts[key].info.name}</th>
         <td>{accounts[key].info.email}</td>
-        <td></td>
       </tr>
     )
   })
@@ -22,7 +21,6 @@ export const ViewCompany = (props) => {
             <tr>
               <th>Name</th>
               <th>Email</th>
-              <th></th>
             </tr>
           </thead>
           <tbody>
