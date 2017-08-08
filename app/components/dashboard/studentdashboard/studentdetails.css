@@ -1,0 +1,35 @@
+.form-signin {
+  max-width: 26.250rem;
+  padding: 0.938rem;
+  margin: 0 auto;
+
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 0.625rem;
+
+}
+.form-signin .checkbox {
+  font-weight: normal;
+
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0.625rem;
+  font-size: 1rem;
+
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+
+}
+.form-signin textarea {
+  margin-bottom: 0.625rem;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+
+}

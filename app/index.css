@@ -1,0 +1,15 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe Ui, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
+  padding-top: 7.5rem;
+  padding-bottom: 3.750rem;
+  background-color: #eee;
+}
+
+.react-spinner_bar {
+  background-color: black;
+}
+

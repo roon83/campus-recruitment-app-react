@@ -1,0 +1,31 @@
+.navbar-default {
+  background-color: rgba(51, 122, 183, 1);
+}
+
+.navbar-default .navbar-brand {
+  color: rgba(255, 255, 255, 1);
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: white;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: rgba(10, 30, 100, 1);
+  background-color: transparent;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: rgba(10, 30, 100, 1);
+  background-color: transparent;
+}
+
+.navbar-default .navbar-nav > li > .active,
+.navbar-default .navbar-nav > li > .active:hover,
+.navbar-default .navbar-nav > li > .active:focus {
+  color: rgba(10, 30, 100, 1);
+  background-color: rgba(200, 230, 244, 1);
+}
+
