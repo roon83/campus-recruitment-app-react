@@ -1,5 +1,5 @@
-import React from 'react';
-import { Col, Panel, Table } from 'react-bootstrap';
+import React from 'react'
+import { Col, Panel, Table } from 'react-bootstrap'
 
 export const StudentList = (props) => {
     const { accounts } = props;

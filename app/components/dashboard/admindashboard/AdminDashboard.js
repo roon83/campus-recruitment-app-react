@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { SideBar } from '../SideBar';
-import { Grid, Row } from 'react-bootstrap';
+import React, { Component } from 'react'
+import { SideBar } from '../SideBar'
+import { Grid, Row } from 'react-bootstrap'
 import profilePhoto from '../../../images/admin-icon.png'
 
 

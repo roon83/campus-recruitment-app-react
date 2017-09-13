@@ -8,7 +8,7 @@ const app = firebase.initializeApp({
   projectId: "campus-recruiter-react",
   storageBucket: "campus-recruiter-react.appspot.com",
   messagingSenderId: "136011884557"
-});
+})
 
 export const base = Rebase.createClass(app.database())
 export const ref = firebase.database().ref()

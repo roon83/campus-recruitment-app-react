@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import { Col, Panel, Table, Button } from 'react-bootstrap';
+import React, { Component } from 'react'
+import { Col, Panel, Table, Button } from 'react-bootstrap'
 import { firebaseAuth, base } from '../../../config/constants'
-import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 export default class PostedJobs extends Component {
   constructor(props) {
@@ -12,24 +12,24 @@ export default class PostedJobs extends Component {
   }
 
   removeJob = (job) => {
-    const postedJobs = {...this.state.postedJobs};
-    postedJobs[job] = null;
+    const postedJobs = {...this.state.postedJobs}
+    postedJobs[job] = null
     this.setState({ postedJobs })
   }
 
   componentWillMount() {
-    const uid = firebaseAuth().currentUser.uid;
+    const uid = firebaseAuth().currentUser.uid
     this.ref = base.syncState(`/users/${uid}/postedJobs`, {
       context: this,
       state: 'postedJobs'
     })
   }
   componentWillUnmount() {
-    base.removeBinding(this.ref);
+    base.removeBinding(this.ref)
   }
 
   render() {
-    const { postedJobs } = this.state;
+    const { postedJobs } = this.state
     const jobList = Object.keys(postedJobs).map(key => {
       return (
         <tr key={key}>

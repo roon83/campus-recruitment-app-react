@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import { firebaseAuth, base } from '../../../config/constants'
-import { ControlLabel, FormControl, FormGroup, Button } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { ControlLabel, FormControl, FormGroup, Button } from 'react-bootstrap'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 export default class PostJobs extends Component {
   constructor(props) {
@@ -15,15 +15,15 @@ export default class PostJobs extends Component {
   }
 
   addJob = (job) => {
-    const postedJobs = {...this.state.postedJobs};
-    const timeStamp = Date.now();
-    postedJobs[`job-${timeStamp}`] = job;
-    this.setState({ postedJobs });
+    const postedJobs = {...this.state.postedJobs}
+    const timeStamp = Date.now()
+    postedJobs[`job-${timeStamp}`] = job
+    this.setState({ postedJobs })
   }
 
   handleChange = (e) => {
-    const target = e.target;
-    const name = target.name;
+    const target = e.target
+    const name = target.name
     this.setState({
       [name]: target.value
     })
@@ -45,7 +45,7 @@ export default class PostJobs extends Component {
   }
 
   componentWillMount() {
-    const uid = firebaseAuth().currentUser.uid;
+    const uid = firebaseAuth().currentUser.uid
     this.ref = base.syncState(`/users/${uid}/postedJobs`, {
       context: this,
       state: 'postedJobs'
@@ -53,7 +53,7 @@ export default class PostJobs extends Component {
   }
 
   componentWillUnmount() {
-    base.removeBinding(this.ref);
+    base.removeBinding(this.ref)
   }
 
   render(){

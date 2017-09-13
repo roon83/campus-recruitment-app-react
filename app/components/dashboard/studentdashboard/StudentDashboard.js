@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import placeholderImage from '../../../images/profile-placeholder.png'
 
 export const StudentDashboard = (props) => {
-  const name = props.name;
+  const name = props.name
   return (
     <Grid fluid>
       <Row>

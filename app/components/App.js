@@ -23,32 +23,35 @@ import { StudentList } from './dashboard/companydashboard/StudentList'
 import { Home } from './home/Home'
 
 export default class App extends Component {
-  state = {
-    details: null,
-    isAdmin: false,
-    isStudent: false,
-    isCompany: false,
-    authed: false,
-    loading: true,
-    dataExist: false,
-    accounts: {}
+constructor(props) {
+  super(props)
+    this.state = {
+      details: null,
+      isAdmin: false,
+      isStudent: false,
+      isCompany: false,
+      authed: false,
+      loading: true,
+      dataExist: false,
+      accounts: {}
+    }
   }
 
   removeJob = (account, job) => {
-    const accounts = {...this.state.accounts};
-    accounts[account].postedJobs[job] = null;
+    const accounts = {...this.state.accounts}
+    accounts[account].postedJobs[job] = null
     this.setState({ accounts })
   }
 
   updateAccountDetails = (account, details) => {
-    const accounts = {...this.state.accounts};
-    accounts[account].userDetails = details;
+    const accounts = {...this.state.accounts}
+    accounts[account].userDetails = details
     this.setState({ accounts })
   }
 
   removeAccount = (account) => {
-    const accounts = {...this.state.accounts};
-    accounts[account] = null;
+    const accounts = {...this.state.accounts}
+    accounts[account] = null
     this.setState({ accounts })
   }
 
@@ -66,7 +69,7 @@ export default class App extends Component {
   componentWillMount () {
     this.removeListener = firebaseAuth().onAuthStateChanged((user) => {
       if (user) {
-        const uid = firebaseAuth().currentUser.uid;
+        const uid = firebaseAuth().currentUser.uid
         ref.child(`users/${uid}/info`).on('value', snap => {
           this.setState({
             details: snap.val(),
@@ -100,9 +103,9 @@ export default class App extends Component {
     })
   }
 
-  componentWillUnmount () {
-    this.removeListener();
-    base.removeBinding(this.ref);
+  componentWillUnmount() {
+    this.removeListener()
+    base.removeBinding(this.ref)
   }
 
   render(){
@@ -150,7 +153,7 @@ export default class App extends Component {
                   accounts={accounts}
                   updateAccountDetails={this.updateAccountDetails}
                   removeAccount={this.removeAccount} />}
-                />}
+              />}
             />
             <PrivateRoute
               exact
@@ -160,7 +163,7 @@ export default class App extends Component {
                 section={<JobList
                   removeJob={this.removeJob}
                   accounts={accounts}/>}
-                />}
+              />}
             />
             <PrivateRoute
               exact
@@ -171,7 +174,7 @@ export default class App extends Component {
                   accounts={accounts}
                   removeJob={this.removeJob}
                   removeAccount={this.removeAccount} />}
-                />}
+              />}
             />
             <PrivateRoute
               exact
@@ -196,7 +199,7 @@ export default class App extends Component {
               component={() => <StudentDashboard
                 name={details.name}
                 section={<ViewJobs
-                    accounts={accounts}/>} />}
+                  accounts={accounts}/>} />}
             />
             <PrivateRoute
               authed={authed}

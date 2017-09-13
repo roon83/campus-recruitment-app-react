@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { Col, Panel, Grid, ControlLabel, FormControl, FormGroup, Table, Button } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React, { Component } from 'react'
+import { Col, Panel, Grid, ControlLabel, FormControl, FormGroup, Table, Button } from 'react-bootstrap'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import { firebaseAuth, base } from '../../../config/constants'
 import './studentdetails.css'
 
@@ -18,7 +18,7 @@ export default class StudentDetails extends Component {
   }
 
   componentWillMount() {
-    const uid = firebaseAuth().currentUser.uid;
+    const uid = firebaseAuth().currentUser.uid
     this.ref = base.syncState(`users/${uid}/userDetails`, {
       context: this,
       state: 'userDetails'
@@ -34,15 +34,15 @@ export default class StudentDetails extends Component {
   }
 
   handleChange = (e) => {
-    const target = e.target;
-    const name = target.name;
+    const target = e.target
+    const name = target.name
     this.setState({
       [name]: target.value
     })
   }
 
   handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault()
     const userDetails = {
       name: this.state.name,
       education: this.state.education,

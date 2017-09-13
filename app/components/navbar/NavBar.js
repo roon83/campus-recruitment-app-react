@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './navbar.css';
-import { Navbar, Grid, Nav, Button, NavItem } from 'react-bootstrap';
-import { NavLink } from 'react-router-dom';
+import React, { Component } from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import './navbar.css'
+import { Navbar, Grid, Nav, Button, NavItem } from 'react-bootstrap'
+import { NavLink } from 'react-router-dom'
 
 export const NavBar = (props) => {
   return (

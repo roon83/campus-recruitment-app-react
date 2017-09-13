@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Col, Panel, Table, ButtonToolbar, Button, Modal, FormGroup, FormControl } from 'react-bootstrap';
+import React, { Component } from 'react'
+import { Col, Panel, Table, ButtonToolbar, Button, Modal, FormGroup, FormControl } from 'react-bootstrap'
 
 export default class StudentsList extends Component {
   state = {
@@ -31,15 +31,15 @@ export default class StudentsList extends Component {
   editDetails = () => this.setState({ editing: true })
 
   handleChange = (e) => {
-    const target = e.target;
-    const name = target.name;
+    const target = e.target
+    const name = target.name
     this.setState({
       [name]: target.value
     })
   }
 
   handleSubmit = (e, key) => {
-    e.preventDefault();
+    e.preventDefault()
     const userDetails = {
       name: this.state.name,
       education: this.state.education,

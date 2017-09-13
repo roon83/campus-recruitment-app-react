@@ -4,7 +4,7 @@ import { Grid, Row } from 'react-bootstrap'
 import placeholderImage from '../../../images/profile-placeholder.png'
 
 export const CompanyDashboard = (props) => {
-  const name = props.name;
+  const name = props.name
   return (
     <Grid fluid>
       <Row>

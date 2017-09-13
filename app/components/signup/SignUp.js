@@ -8,7 +8,7 @@ import { CompanyDashboard } from '../dashboard/companydashboard/CompanyDashboard
 import { StudentDashboard } from '../dashboard/studentdashboard/StudentDashboard'
 import { StudentDetails } from '../dashboard/studentdashboard/StudentDetails'
 
-const setErrorMsg = (error) => ({registerError: error.message});
+const setErrorMsg = (error) => ({registerError: error.message})
 
 export default class SignUp extends Component {
   constructor(props) {
@@ -23,27 +23,27 @@ export default class SignUp extends Component {
   }
 
   handleChange = (e) => {
-    const target = e.target;
-    const name = target.name;
+    const target = e.target
+    const name = target.name
     this.setState({
       [name]: target.value
     })
   }
 
   handleClick = (e) => {
-    const target = e.target;
-    const name = target.name;
+    const target = e.target
+    const name = target.name
     this.setState({
       [name]: target.value
     })
   }
 
   handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault()
     auth(this.state.email, this.state.password)
       .catch((e) => this.setState(setErrorMsg(e)))
       .then((info) => {
-        const uid = firebaseAuth().currentUser.uid;
+        const uid = firebaseAuth().currentUser.uid
         ref.child(`users/${uid}/info`).set({
           name: this.state.name,
           email: this.state.email,

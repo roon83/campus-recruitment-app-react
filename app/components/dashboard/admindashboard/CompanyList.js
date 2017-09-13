@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Col, Panel, Table, ButtonToolbar, Button, Modal, FormGroup, FormControl } from 'react-bootstrap';
+import React, { Component } from 'react'
+import { Col, Panel, Table, ButtonToolbar, Button, Modal, FormGroup, FormControl } from 'react-bootstrap'
 
 export default class CompanyList extends Component {
   state = {
@@ -22,7 +22,7 @@ export default class CompanyList extends Component {
   hideDetails = () => this.setState({ details: false })
 
   render() {
-    const { accounts } = this.props;
+    const { accounts } = this.props
     const displayAccounts = Object.keys(accounts).filter(key => {
       return accounts[key].info.type === 'company'
     }).map((key, index) => {

@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import { Grid, FormGroup, FormControl, Radio, ControlLabel, Checkbox, Button } from 'react-bootstrap';
+import React, { Component } from 'react'
+import { Grid, FormGroup, FormControl, Radio, ControlLabel, Checkbox, Button } from 'react-bootstrap'
 import { login, resetPassword } from '../../helpers/auth'
-import {BrowserRouter as Router, Redirect} from 'react-router-dom';
-import './signin.css';
+import {BrowserRouter as Router, Redirect} from 'react-router-dom'
+import './signin.css'
 
-const setErrorMsg = (error) => ({loginMessage: error});
+const setErrorMsg = (error) => ({loginMessage: error})
 
 export default class SignIn extends Component {
   constructor(props) {
@@ -12,13 +12,13 @@ export default class SignIn extends Component {
     this.state = {
       email: 'admin@admin.com',
       password: 'admindashboard',
-      loginMessage: null,
+      loginMessage: null
     }
   }
 
   handleChange = (event) => {
-    const target = event.target;
-    const name = target.name;
+    const target = event.target
+    const name = target.name
     this.setState({
       [name]: target.value
     })

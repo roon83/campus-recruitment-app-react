@@ -1,8 +1,8 @@
-import React from 'react';
-import { Col, Panel, Table } from 'react-bootstrap';
+import React from 'react'
+import { Col, Panel, Table } from 'react-bootstrap'
 
 export const ViewCompany = (props) => {
-  const { accounts } = props;
+  const { accounts } = props
   const displayAccounts = Object.keys(accounts).filter(key => {
     return accounts[key].info.type === 'company'
   }).map(key => {

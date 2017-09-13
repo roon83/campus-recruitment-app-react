@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import { Col, Panel, Table, Button } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React, { Component } from 'react'
+import { Col, Panel, Table, Button } from 'react-bootstrap'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 export const JobList = (props) => {
-  const { accounts } = props;
+  const { accounts } = props
   const jobs = Object.keys(accounts).filter(key => {
     return (
       accounts[key].postedJobs
